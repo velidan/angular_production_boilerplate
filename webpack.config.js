@@ -1,1 +1,4 @@
-module.exports = 0 ? require('./config/webpack.prod.js') : require('./config/webpack.dev.js') ;
+const NODE_ENV = process.env.NODE_ENV || 'development',
+	confType = NODE_ENV === 'production' ? 'prod' : 'dev';
+
+module.exports = require(`./config/webpack.${confType}.js`);

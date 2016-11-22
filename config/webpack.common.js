@@ -13,9 +13,7 @@ module.exports = {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
     'app': './src/main.ts',
-    'bundled_scripts': ["./src/assets/scripts/auth/cgm_auth.js"
-    , "./src/assets/scripts/auth/index_page.js"
-    , "./src/assets/scripts/auth/login_page.js"]
+    'bundled_scripts': glob.sync('./src/assets/**/*.js')
   },
 
   resolve: {
