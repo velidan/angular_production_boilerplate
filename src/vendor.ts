@@ -8,7 +8,7 @@ import '@angular/router';
 
 // RxJS
 import 'rxjs';
-import * as $ from 'jquery';
+import 'jquery';
 // import 'ng2-redux';
 
 
