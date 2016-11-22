@@ -1,10 +1,17 @@
 var webpack = require('webpack');
+var path = require('path');
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 // var ProvidePlugin = require('webpack/lib/ProvidePlugin');
+
 var helpers = require('./helpers');
 var glob = require("glob"); //should del if entries works!
-var entry = require('webpack-glob-entry')
+var entry = require('webpack-glob-entry');
+
+
 
 //    'bundled_scripts': glob.sync('./src/assets/**/*.js')
 
@@ -13,7 +20,7 @@ module.exports = {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
     'app': './src/main.ts',
-    'bundled_scripts': glob.sync('./src/assets/**/*.js')
+    'bundled_scripts': glob.sync('./src/assets/scripts/**/*.js')
   },
 
   resolve: {
@@ -60,6 +67,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
+
+    new CopyWebpackPlugin([
+        {
+          context: './src',
+          from : {
+            glob : 'assets/static_files_to_copy/**/*',
+            to : 'dist/assets/[name].[ext]'
+          }
+        }
+      ]),
 
     new webpack.ProvidePlugin({
      jQuery: 'jquery',

@@ -9,7 +9,7 @@ import '@angular/router';
 // RxJS
 import 'rxjs';
 import 'jquery';
-// import 'ng2-redux';
+
 
 
 // Other vendors for example jQuery, Lodash or Bootstrap

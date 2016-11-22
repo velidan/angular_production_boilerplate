@@ -1,0 +1,1 @@
+console.log('I\'m static file_1');
