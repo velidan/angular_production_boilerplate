@@ -1,3 +1,6 @@
+var cgmAuthModule = require('./cgm_auth'),
+  cgmAuth = cgmAuthModule.cgmAuth;
+
 $(function () {
   $('#formLogin').on('submit', function (e) {
     e.preventDefault();

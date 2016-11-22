@@ -1,3 +1,6 @@
+var cgmAuthModule = require('./cgm_auth'),
+  cgmAuth = cgmAuthModule.cgmAuth;
+
 cgmAuth.isAuthenticated().then(
   function (isAuthenticated) {
     if (isAuthenticated) {

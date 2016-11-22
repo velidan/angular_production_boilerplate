@@ -63,8 +63,11 @@ var cgmAuth = {
       url: apiDomain + '/Nucleus/services/cgm/g3/bas/security/SecurityComponent/getCurrentContext',
       xhrFields: { withCredentials: true },
       success: function (data) {
-        console.log(data);
+        //console.log(data);
       }
     });
   }
 };
+
+
+exports.cgmAuth = cgmAuth;

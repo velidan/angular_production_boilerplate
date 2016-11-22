@@ -3,7 +3,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 // var ProvidePlugin = require('webpack/lib/ProvidePlugin');
 var helpers = require('./helpers');
-var glob = require("glob");
+var glob = require("glob"); //should del if entries works!
+var entry = require('webpack-glob-entry')
 
 //    'bundled_scripts': glob.sync('./src/assets/**/*.js')
 
@@ -11,7 +12,10 @@ module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    'app': './src/main.ts'
+    'app': './src/main.ts',
+    'bundled_scripts': ["./src/assets/scripts/auth/cgm_auth.js"
+    , "./src/assets/scripts/auth/index_page.js"
+    , "./src/assets/scripts/auth/login_page.js"]
   },
 
   resolve: {

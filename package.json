@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Wellnine Project",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "webpack-dev-server --inline --progress --colors --port 8080",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install"
   },
@@ -53,7 +53,6 @@
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-glob": "^2.0.2",
-    "webpack-glob-entries": "^1.0.1",
     "webpack-glob-entry": "^2.1.0",
     "webpack-merge": "^0.15.0"
   }
