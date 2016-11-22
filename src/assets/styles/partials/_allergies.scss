@@ -1,0 +1,235 @@
+$allergyMainFontSize: 14px;
+
+.allergy-header {
+    border-bottom-color: red;
+  }
+
+
+.verify-btn {
+  cursor: pointer;
+  //text-decoration: underline;
+  margin-left: 25px;
+
+  &:hover {
+    text-decoration : none;
+  }
+}
+
+.add-allergies-btn {
+  margin-left: 25px;
+}
+
+.reactions-autocomplete-box {
+  position: relative;
+}
+
+.allergies {
+  font-size: $allergyMainFontSize;
+
+
+  .main-content {
+    border-width : 1px;
+    border-style : solid;
+
+  }
+
+  .data-list-item {
+    padding : 8px;
+    display: flex;
+    align-items:center;    
+  
+
+  }
+
+  .data-list-item {
+    &:not(:last-child) {
+      border-right-width : 1px;
+      border-right-style : none;
+       
+    }
+  }
+
+  .data-table-row {
+    border-bottom-width : 1px;
+    border-bottom-style : none;
+  }
+
+  .actions {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+} /* !allergies */
+
+.noborder{
+  border:0px;
+  background-color: Transparent;
+}
+
+  .p-top {
+    padding-top: 5px;
+    padding-bottom: 25px; 
+  }
+
+.modal-allergy-body {
+  font-size: $allergyMainFontSize;
+
+
+  .ui-button-icon-only .ui-button-text {
+    font-size: 0;
+  }
+
+  .dropdown-toggle,
+  .add-reaction-btn {
+    height: 30px;
+    padding: 4px 12px;
+  }
+
+  .row:not(:first-child) {
+    margin-top: 20px;
+  }
+
+
+  .dropdown-menu {
+    .dropdown-menu-item {
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+  }
+
+  .ui-autocomplete-dropdown.ui-button span {
+    display: inline-block;
+  }
+
+  .ui-autocomplete-panel {
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+
+    .ui-autocomplete-list {
+      padding: 0;
+    }
+
+    .ui-autocomplete-list-item {
+      padding: 4px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e2e2e2;
+      }
+    }
+  }
+
+  .ui-inputtext {
+    @include flexGrow(1);
+    line-height: 1.42857143;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+    background-color: #FFFFFF;
+    border: 1px solid #d3d3d3;
+    border-radius: 0;
+    color: inherit;
+    padding: 4px 8px;
+    font-size: 13px;
+    height: 30px;
+    transition: none;
+
+    &:focus {
+      border-color: #CAC7C7;
+      outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(172, 172, 172, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(172, 172, 172, 0.6);
+    }
+  }
+  .ui-autocomplete {
+    width: 100%;
+    @include flex();
+
+    .ui-autocomplete-dropdown {
+      //position: relative;
+    }
+
+  }
+
+
+
+  .input-group-addon {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .cgm-date-picker {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    transform: translate(46%, 0);
+    z-index: 2;
+  }
+
+  .standard-select,
+  .standard-select option {
+    text-transform: uppercase;
+  }
+
+  .small-fields-group {
+    width: 35%;
+  }
+
+} /* !modal-allergy-body */
+
+.add-allergy-box {
+
+  .add-allergy {
+    margin: 10px 5px;
+    @include flexGrow(1);
+    outline: none;
+  }
+
+}
+
+.input-group-btn:last-child > .btn.add-reaction-btn {
+  margin-left: 5px;
+  border-radius: 2px;
+}
+
+.simple-content-container {
+  min-height: 150px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  border-width : 1px;
+  border-style : solid;
+  border-radius: 4px;
+}
+
+.comments-container {
+  margin: 0;
+  width: 100%;
+  resize: none;
+}
+
+.reactions-list-container {
+  list-style: none;
+
+  .removeAllergyIco {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}

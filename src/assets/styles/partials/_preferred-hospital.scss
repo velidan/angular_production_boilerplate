@@ -1,0 +1,98 @@
+.add-clinic-box {
+  margin-bottom: 20px;
+  .nav-tabs {
+    padding: 10px 10px 0;
+  }
+  .reject-add-clinic-btn {
+    position: relative;
+    top: -35px;
+    right: 10px;
+  }
+  .screenPartHeader {
+    margin: 20px 0 0 0;
+  }
+}
+.add-clinic-box > .row:first-child {
+  padding: 0 15px;
+}
+.patient-favorite-hospital {
+  .screenPartHeader {
+    margin: 10px 0 0 0;
+  }
+}
+.pref-hosp-content-wrapper {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 145px;
+}
+.clinic-favorites-wrapper {
+  padding-bottom: 0;
+}
+.pref-hospital-tab {
+  .padder,
+  .drag-icon-wrap	{
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .drag-icon-wrap {
+    justify-content: center;
+  }
+
+  .removePrefPharmIco	{
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .no-res {
+    min-height: 30px;
+    display: flex;
+    alingn-items: center;
+    padding-left: 15px;
+  }
+
+  .part-content-wrapper {
+    height : 145px;
+    overflow : hidden;
+    overflow-y : scroll;
+  }
+
+  .st-main-content .body-row {
+    flex-wrap : wrap;
+  }
+
+  .row-detail {
+    width : 100%;
+  }
+
+  .list-row--detail {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+  .fa-chevron-right.active {
+    transform : rotate(90deg);
+  }
+
+  .head-title {
+    font-weight : bold;
+  }
+
+  .head-line {
+    margin-left : 0;
+    margin-right : 0;
+    @include borderNoColor(bottom);
+    margin-bottom : 20px;
+  }
+
+}
+
+.head-align {
+  padding-right: 17px;
+}
+
+p-dialog .ui-dialog {
+  left: 40% !important;
+  top: 20% !important;
+}

@@ -1,0 +1,89 @@
+.pref-pharmacies-tab {
+	.padder,
+    .drag-icon-wrap	{
+		min-height: 30px;
+		display: flex;
+		align-items: center;
+		word-break: break-word;
+	}
+	
+	.drag-icon-wrap {
+		justify-content: center;
+	}
+	
+	.removePrefPharmIco	{
+	  cursor: pointer;
+	  font-size: 18px;
+	}
+	
+	.no-res {
+		min-height: 30px;
+		display: flex;
+		alingn-items: center;
+		padding-left: 15px;
+	}
+	
+	.part-content-wrapper {
+		height : 145px;
+		overflow : hidden;
+		overflow-y : scroll;
+	}
+	
+	.st-main-content .body-row {
+		flex-wrap : wrap;
+	}
+	
+	.row-detail {
+		width : 100%;
+	}
+	
+	.list-row--detail {
+		border-top-width: 1px;
+		border-top-style: solid;
+	}
+	
+	.fa-chevron-right.active {
+		transform : rotate(90deg);
+	}
+	
+	.head-title {
+		font-weight : bold;
+	}
+	
+	.head-line {
+		margin-left : 0;
+		margin-right : 0;
+		@include borderNoColor(bottom);
+		margin-bottom : 20px;
+	}
+	
+}
+
+.fa-chevron-right {
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.add-part{
+	    margin-bottom: 20px;
+}
+
+.maps-box {
+    width : 100%;
+    height : 100%;
+    display : block;
+	
+	border: 1px solid #DDD;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.3);
+	
+	.maps-inner-box {
+		width : inherit;
+		height : inherit;
+	}
+}
+
+.head-align {
+	padding-right: 17px;
+}

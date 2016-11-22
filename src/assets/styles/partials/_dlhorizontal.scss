@@ -1,0 +1,17 @@
+.dl-horizontal dt {
+  width: 145px;
+}
+
+.dl-horizontal dd {
+  margin-left: 150px;
+}
+
+@media (min-width: 768px) {
+  .dl-horizontal-small dt {
+    width: 125px;
+  }
+
+  .dl-horizontal-small dd {
+    margin-left: 135px;
+  }
+}

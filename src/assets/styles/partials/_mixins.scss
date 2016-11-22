@@ -1,0 +1,11 @@
+// mixin for simple borders where color placed in reskin
+@mixin borderNoColor($side: null) {
+  @if ($side == null) {
+    border-width : 1px;
+    border-style : solid;
+  } @else {
+    border-#{$side}-width : 1px;
+    border-#{$side}-style : solid;
+  }
+
+}

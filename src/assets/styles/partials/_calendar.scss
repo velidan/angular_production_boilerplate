@@ -1,0 +1,30 @@
+.no-navigation-calendar .ui-datepicker {
+  pointer-events: none;
+  a.ui-state-active{
+    background-color: transparent;
+  }
+  .ui-datepicker-header .ui-corner-all {
+    display: none;
+  }
+}
+
+.scheduler-calendar .ui-datepicker {
+  min-height: 262px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+  .ui-datepicker-header {
+    position: static;
+  }
+
+  .ui-datepicker-prev, .ui-datepicker-next {
+    top: initial;
+    bottom: 2px;
+  }
+}
+
+
+
+
+

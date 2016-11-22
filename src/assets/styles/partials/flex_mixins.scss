@@ -1,0 +1,55 @@
+@mixin flex() {
+  display : -webkit-box;
+  display : -moz-box;
+  display : -ms-flexbox;
+  display : -webkit-flex;
+  display : flex;
+}
+
+@mixin flexColumn() {
+  display : -webkit-box;
+  display : -moz-box;
+  display : -ms-flexbox;
+  display : -webkit-flex;
+  display : flex;
+  -webkit-flex-direction : column;
+  -ms-flex-direction : column;
+  flex-direction : column
+}
+
+@mixin flexCentralizeV() {
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+@mixin flexCentralizeH() {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+@mixin flexGrow($val) {
+  -webkit-flex-grow : $val;
+  -ms-flex-grow : $val;
+  flex-grow : $val;
+}
+
+
+.flr {
+  @include flex();
+}
+
+.flc {
+  @include flexColumn();
+}
+
+.flgr-1 {
+  @include flexGrow(1);
+}
+
+.flr-centr-v {
+  @include flexCentralizeV();
+}
+
+.flr-centr-h {
+  @include flexCentralizeH();
+}

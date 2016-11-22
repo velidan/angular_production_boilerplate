@@ -1,0 +1,66 @@
+.problem-note {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.problem-list-row {
+  flex-wrap: wrap;
+}
+
+.edit-part {
+  width: 100%;
+  margin: 10px 15px 20px;
+  padding-top: 20px;
+
+  .reject-edit-problem-btn {
+    display: none;
+  }
+
+  .edit-header {
+    text-indent: 5px;
+    padding: 7px 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+
+    span:first-child {
+      font-size: 1.1em;
+    }
+
+    .close-label {
+      display: none;
+    }
+
+    .remove-problem-icon {
+      padding-right: 5px;
+      padding-top: 1px;
+      i {
+        cursor: pointer;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.add-part .edit-header {
+  display: none;
+}
+
+.delete-problem-confirm .ui-dialog {
+  left: 35% !important;
+  top: 20% !important;
+}
+
+.problem-row-wrapper {
+  width: 100%;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.problem-list-row:nth-of-type(odd) {
+  background-color: #f5f4f4;
+}
+
+.problem-list-row:nth-of-type(even) {
+  background-color: #ffffff !important;
+}

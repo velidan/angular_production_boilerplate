@@ -1,0 +1,34 @@
+<div class="color-picker" *ngIf="show" [style.height.px]="cpHeight" [style.top.px]="top" [style.left.px]="left" [style.position]="position">
+    <div class="arrow arrow-{{cpPosition}}" [style.top.px]="arrowTop"></div>    
+
+    <div [slider] [style.background-color]="hueSliderColor" [rgX]="1" [rgY]="1" (newValue)="setSaturationAndBrightness($event)" class="saturation-lightness">
+        <div [style.left.px]="slider.s" [style.top.px]="slider.v" class="cursor"></div>
+    </div>
+
+    <div [slider] [rgX]="1" (newValue)="setHue($event)" class="hue">
+        <div [style.left.px]="slider.h" class="cursor"></div>
+    </div>
+
+    <div [style.background-color]="outputColor" class="selected-color"></div>
+
+    
+    <div class="custom-colors-text"> Custom colors: </div>
+
+
+    <button #button type="button" class="cp-saved-color-button-class"
+                *ngFor="let color of savedColors; let i = index" [style.background]="color.value" id={{i}} (click)="setOutputColor(color,button)"></button>
+
+    <button type="button" class="cp-add-custom-color-class" (click)="addToCustomColors()">Add to custom colors</button>
+
+
+            <div class="ibox-tools" >
+                <a><i class="fa fa-trash-o fa-lg cp-remove-custom-color-class" (click)="deleteCustomColor()"></i></a>
+            </div>
+    
+    
+    <button *ngIf="cpCancelButton" type="button" class="{{cpCancelButtonClass}}" (click)="cancelColor()">{{cpCancelButtonText}}</button>
+
+
+
+</div>
+

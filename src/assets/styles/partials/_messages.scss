@@ -1,0 +1,53 @@
+.messages-page {
+  .pagination-counter {
+    position: absolute;
+    right: 105px;
+    top: 15px;
+    font-weight: bold;
+  }
+
+  .per-page {
+    position: absolute;
+    left: 75px;
+    top: 15px;
+  }
+
+  p-paginator {
+    display: block;
+    border: 0;
+    margin-right: 0;
+
+    .ui-paginator-pages {
+      display: none;
+    }
+
+    .ui-paginator-first {
+      display: none;
+    }
+
+    .ui-paginator-last {
+      display: none;
+    }
+
+    .fa-backward, .fa-forward {
+      font-size: 14px;
+      padding-top: 0;
+    }
+
+    .ui-paginator {
+      text-align: right;
+
+      .ui-paginator-next,
+      .ui-paginator-prev {
+        display: inline-block;
+        float: none;
+        padding: 8px 10px 6px 10px;
+        border: 1px solid #e7eaec;
+      }
+      .ui-paginator-rpp-options {
+        float:left;
+      }
+    }
+
+  }
+}

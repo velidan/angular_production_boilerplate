@@ -1,0 +1,123 @@
+.ui-datepicker {
+  .btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+}
+.ui-datepicker{
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.428571429;
+}
+.ui-datepicker tr td {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+}
+
+.ui-datepicker tr td:hover{
+  background-color: #EBEBEB;
+}
+
+.ui-datepicker tr td a{
+  text-align: center;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.428571429;
+}
+
+.ui-datepicker tr td a.ui-state-active{
+  background-color: #d3d3d3;
+  border-color: #285e8e;
+}
+
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+  background: none;
+  border: 0;
+}
+.ui-calendar button{
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 1px;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next{
+  background-color: white;
+}
+input.hasDatepicker{
+  width: 90px;
+  padding-right: 8px;
+}
+
+
+
+.ui-datepicker .ui-datepicker-next {
+  right: 1px;
+  top: 1px;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  left: 1px;
+  top: 1px;
+}
+
+.ui-datepicker {
+
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    &:before, &:after {
+      font: normal normal normal 14px/1 FontAwesome;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+
+  .ui-datepicker-prev {
+
+    &:before {
+      display: inline-block;
+      content: "\f060";
+    }
+  }
+
+  .ui-datepicker-next {
+    &:before {
+      display: inline-block;
+      content: "\f061";
+    }
+  }
+}
