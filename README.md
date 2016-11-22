@@ -1,5 +1,5 @@
 # angular2-lazy-load-example
-Project by Svia Welline
+Project by Sviat Welline
 
 ## How run run the application
 
