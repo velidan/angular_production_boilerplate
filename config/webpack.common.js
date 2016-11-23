@@ -7,6 +7,9 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // var ProvidePlugin = require('webpack/lib/ProvidePlugin');
 
+var SpritesmithPlugin = require('webpack-spritesmith');
+
+
 var helpers = require('./helpers');
 var glob = require("glob"); //should del if entries works!
 var entry = require('webpack-glob-entry');
@@ -24,7 +27,8 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts'],
+     modulesDirectories: ["web_modules", "node_modules", "spritesmith-generated"]
   },
 
   module: {
@@ -87,6 +91,20 @@ module.exports = {
      $: 'jquery',
      jquery: 'jquery'
    }),
-
+    new SpritesmithPlugin({
+        src: {
+            cwd: path.resolve('./src/assets/ico'),
+            glob: '*.png'
+        },
+        target: {
+            image: path.resolve('./src/assets/spritesmith-generated/sprite.png'),
+            css: path.resolve('./src/assets/spritesmith-generated/sprite.scss')
+        },
+        apiOptions: {
+            cssImageRef: "~sprite.png"
+        }
+    })
   ]
 };
+
+console.log(__dirname);

@@ -57,6 +57,7 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-glob": "^2.0.2",
     "webpack-glob-entry": "^2.1.0",
-    "webpack-merge": "^0.15.0"
+    "webpack-merge": "^0.15.0",
+    "webpack-spritesmith": "^0.3.0"
   }
 }

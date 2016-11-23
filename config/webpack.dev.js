@@ -6,7 +6,7 @@ var helpers = require('./helpers');
 var CssSourcemapPlugin = require('css-sourcemaps-webpack-plugin');
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
 
   output: {
     path: helpers.root('dist'),
