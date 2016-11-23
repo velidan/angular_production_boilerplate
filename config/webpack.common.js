@@ -53,11 +53,11 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
       {
-        test: /\.scss$/,
-        include: helpers.root('src', ''),
+        test: /\.(scss|sass)$/,
+        include: helpers.root('src', 'assets', 'styles'),
         loader: ExtractTextPlugin.extract(
-          'style', // backup loader when not building .css file
-          'css!sass' // loaders to preprocess CSS
+          'style',
+          'css!resolve-url!sass' 
         )
       },
     ]
