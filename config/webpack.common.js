@@ -31,6 +31,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
+        exclude: [/node_modules/],
         loaders: ['awesome-typescript-loader', 'angular2-template-loader', 'angular2-router-loader']
       },
       {
@@ -43,18 +44,21 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
-      },
-      {
-        test: /\.css$/,
         include: helpers.root('src', 'app'),
         loader: 'raw'
       },
       {
+        test: /\.css$/,
+        exclude: helpers.root('src', 'app'),
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+      },
+      {
         test: /\.scss$/,
         include: helpers.root('src', ''),
-        loaders: ["style", "css", "sass"]
+        loader: ExtractTextPlugin.extract(
+          'style', // backup loader when not building .css file
+          'css!sass' // loaders to preprocess CSS
+        )
       },
     ]
   },
@@ -82,6 +86,7 @@ module.exports = {
      jQuery: 'jquery',
      $: 'jquery',
      jquery: 'jquery'
-   })
+   }),
+
   ]
 };

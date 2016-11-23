@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+
 constructor() {
 console.log("sdf");
 //$('body').css("background-color", "brown");

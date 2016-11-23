@@ -1,33 +1,10 @@
-@import "partials/mixins";
-@import "partials/flex_mixins";
-@import "partials/autocomplete";
-@import "partials/backgrounds";
-@import "partials/buttons";
-@import "partials/datepicker";
-@import "partials/general";
-@import "partials/ibox";
-@import "partials/inputs";
-@import "partials/labels";
-@import "partials/margins-paddings";
-@import "partials/messages";
-@import "partials/modal_dialogs";
-@import "partials/p-dialog";
-@import "partials/navbar";
-@import "partials/tables";
-@import "partials/tabs";
-@import "partials/typography";
-@import "partials/utils";
-@import "partials/allergies";
-@import "partials/vitals";
-@import "partials/dlhorizontal";
-@import "partials/care-team";
-@import "partials/pref_pharmacies";
-@import "partials/preferred-hospital";
-@import "partials/family_history";
-@import "partials/problem-list";
-@import "partials/schedule";
-@import "partials/calendar";
+
+/* --- System low-level parts of rules like @media/mixins etc. --- */
+
+@import "system/mixins";
+@import "system/flex_mixins";
+@import "system/media";
+/* --- !System --- */
 
 
-@import "partials/widgets/sortable";
-@import "partials/widgets/info-popup";
+@import "partials/test";

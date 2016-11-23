@@ -1,0 +1,76 @@
+/* Media breakpoints */
+
+/* --- Standard --- */
+$small__width_320: 320px;
+$phone__width_480: 480px;
+$tablet__width_768: 768px;
+$desktop__width_992: 992px;
+$wide__width_1200: 1200px;
+
+@mixin small {
+  @media (min-width: #{$small__width_320}) and (max-width: #{$phone__width_480 - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (min-width: #{$phone__width_480}) and (max-width: #{$tablet__width_768 - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet__width_768}) and (max-width: #{$desktop__width_992 - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop__width_992}) and (max-width: #{$wide__width_1200 - 1px}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$wide__width_1200}) {
+    @content;
+  }
+}
+
+@mixin toTablet {
+  @media (max-width: #{$tablet__width_768 - 1px}) {
+    @content;
+  }
+}
+
+
+/* --- Example of mixin use ---
+
+
+  h1 {
+    font-size: 16px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+
+
+*/
+
+/* --- !Standard --- */
+/* ==================================================================================== */
+/* --- Custom --- */
+$tabsBreakMaxW_991: 991px;
+
+@mixin custom_TabBreak {
+  @media (max-width: #{$tabsBreakMaxW_991}) {
+    @content;
+  }
+}
+
+

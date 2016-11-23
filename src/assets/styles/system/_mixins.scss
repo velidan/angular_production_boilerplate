@@ -1,8 +1,8 @@
 // mixin for simple borders where color placed in reskin
-@mixin borderNoColor($side: null) {
+@mixin borderNoColor($side: null, $width: 1, $style: solid) {
   @if ($side == null) {
-    border-width : 1px;
-    border-style : solid;
+    border-width : $width + px;
+    border-style : $style;
   } @else {
     border-#{$side}-width : 1px;
     border-#{$side}-style : solid;
