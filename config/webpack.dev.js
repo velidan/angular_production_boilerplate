@@ -1,27 +1,26 @@
-var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var commonConfig = require('./webpack.common.js');
-var helpers = require('./helpers');
-
-var CssSourcemapPlugin = require('css-sourcemaps-webpack-plugin');
+var helpers = require("./helpers"),
+  webpackMerge = require("webpack-merge"),
+  ExtractTextPlugin = require("extract-text-webpack-plugin"),
+  commonConfig = require("./webpack.common.js"),
+  CssSourcemapPlugin = require("css-sourcemaps-webpack-plugin");
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: 'source-map',
+  devtool : "source-map",
 
-  output: {
-    path: helpers.root('dist'),
-    publicPath: 'http://localhost:8080/',
-    filename: '[name].js',
-    chunkFilename: '[id].chunk.js'
+  output : {
+    path : helpers.root("dist"),
+    publicPath : "http://localhost:8080/",
+    filename : "[name].js",
+    chunkFilename : "[id].chunk.js"
   },
 
-  plugins: [
+  plugins : [
     new CssSourcemapPlugin(),
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin("[name].css")
   ],
 
-  devServer: {
-    historyApiFallback: true,
-    stats: 'minimal'
+  devServer : {
+    historyApiFallback : true,
+    stats : "minimal"
   }
 });
