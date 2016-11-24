@@ -9,6 +9,11 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var SpritesmithPlugin = require('webpack-spritesmith');
 
+/* test */
+
+var SvgStore = require('webpack-svgstore-plugin');
+
+/* !test */
 
 var helpers = require('./helpers');
 var glob = require("glob"); //should del if entries works!
@@ -91,6 +96,7 @@ module.exports = {
      $: 'jquery',
      jquery: 'jquery'
    }),
+
     new SpritesmithPlugin({
         src: {
             cwd: path.resolve('./src/assets/ico'),
@@ -103,6 +109,17 @@ module.exports = {
         apiOptions: {
             cssImageRef: "~sprite.png"
         }
+    }),
+
+    new SvgStore({
+      // svgo options
+      svgoOptions: {
+        plugins: [
+          { removeTitle: true }
+        ]
+      },
+      prefix: 'icon-'
     })
+
   ]
 };
