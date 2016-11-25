@@ -1,3 +1,5 @@
+import 'font-awesome/css/font-awesome.css';
+
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
 import '@angular/core';
