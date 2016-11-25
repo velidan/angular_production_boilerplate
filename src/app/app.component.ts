@@ -10,7 +10,7 @@ export class AppComponent {
 
 
 constructor() {
-console.log("sdf");
+console.log("sdfsdfsdf");
 //$('body').css("background-color", "brown");
 console.log(_.defaults({ 'a': 1 }, { 'a': 3, 'b': 2 }))
 }
