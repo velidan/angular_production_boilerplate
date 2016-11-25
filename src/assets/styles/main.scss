@@ -15,6 +15,7 @@
 
 /* ---  Vendors  --- */
 
+@import "../../../node_modules/font-awesome/scss/font-awesome";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 /* ---  !Vendors  --- */
@@ -26,6 +27,8 @@
 @import "system/mixins";
 @import "system/flex_mixins";
 @import "system/media";
+
+@import "system/theme";
 /* --- !System --- */
 
 
