@@ -13,6 +13,14 @@
 @import "../spritesmith-generated/sprite";
 
 
+/* ---  Vendors  --- */
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+/* ---  !Vendors  --- */
+
+
+
 /* --- System low-level parts of rules like @media/mixins etc. --- */
 
 @import "system/mixins";
