@@ -9,7 +9,7 @@
 	<div class="row row-offcanvas row-offcanvas-left">
 		
 		<div class="col-md-3 col-lg-2 sidebar-offcanvas" id="sidebar" role="navigation">
-            <ul class="nav nav-pills nav-stacked">
+            <ul class="nav nav-pills nav-stacked st-side-nav">
                 <li class="nav-item"><a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Home</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/details" routerLinkActive="active">Details</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
@@ -22,6 +22,9 @@
         </div>
 
 			<div class="col-md-9 col-lg-10">
+				<p class="hidden-md-up">
+		                <button type="button" class="btn btn-primary-outline btn-sm" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Menu</button>
+		        </p>
             	<router-outlet></router-outlet>
 			</div>
 
