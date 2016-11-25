@@ -47,7 +47,7 @@ export class FooterComponent {
   public footerData: FooterDataInterface = {
     'copyrightLabel': 'Copyright',
     'copyRightTxt': 'CompuGroup Medical',
-    'copyYearStart': 2017,
+    'copyYearStart': 2015,
     'copyCurrentYear': this.getCurrentYear()
   };
 

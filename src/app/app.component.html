@@ -4,16 +4,15 @@
 
 
 
-<div class="container-fluid" id="main">
+<main class="container-fluid">
 
 	<div class="row row-offcanvas row-offcanvas-left">
 		
 		<div class="col-md-3 col-lg-2 sidebar-offcanvas" id="sidebar" role="navigation">
             <ul class="nav nav-pills nav-stacked">
-                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Export</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/details" routerLinkActive="active">Details</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Nav item</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Nav item</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Another</a></li>
@@ -22,199 +21,16 @@
             </ul>
         </div>
 
+			<div class="col-md-9 col-lg-10">
+            	<router-outlet></router-outlet>
+			</div>
 
-			<main class="col-md-9 col-lg-10 main">
-
-				<p class="hidden-md-up">
-		                <button type="button" class="btn btn-primary-outline btn-sm" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Menu</button>
-		        </p>
-
-		        <h1 class="display-1 hidden-xs-down">Nucleous Admin Dashboard</h1>
-				<p class="lead">(with off-canvas sidebar, based on BS v4 alpha)</p>
-
-				<div class="alert alert-warning fade collapse" role="alert" id="myAlert">
-		                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		                    <span aria-hidden="true">×</span>
-		                    <span class="sr-only">Close</span>
-		                </button>
-		                <strong>Holy guacamole!</strong> It's free.. this is an example theme.
-		            </div>
-
-
-					<div class="row">
-		                <div class="col-lg-3 col-md-6">
-		                    <div class="card card-inverse card-success">
-		                        <div class="card-block bg-success">
-		                            <div class="rotate">
-		                                <i class="fa fa-user fa-5x"></i>
-		                            </div>
-		                            <h6 class="text-uppercase">Users</h6>
-		                            <h1 class="display-1">134</h1>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="col-lg-3 col-md-6">
-		                    <div class="card card-inverse card-danger">
-		                        <div class="card-block bg-danger">
-		                            <div class="rotate">
-		                                <i class="fa fa-list fa-4x"></i>
-		                            </div>
-		                            <h6 class="text-uppercase">Posts</h6>
-		                            <h1 class="display-1">87</h1>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="col-lg-3 col-md-6">
-		                    <div class="card card-inverse card-info">
-		                        <div class="card-block bg-info">
-		                            <div class="rotate">
-		                                <i class="fa fa-twitter fa-5x"></i>
-		                            </div>
-		                            <h6 class="text-uppercase">Tweets</h6>
-		                            <h1 class="display-1">125</h1>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="col-lg-3 col-md-6">
-		                    <div class="card card-inverse card-warning">
-		                        <div class="card-block bg-warning">
-		                            <div class="rotate">
-		                                <i class="fa fa-share fa-5x"></i>
-		                            </div>
-		                            <h6 class="text-uppercase">Shares</h6>
-		                            <h1 class="display-1">36</h1>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-<hr>
-<p class="lead">
-                Are you ready for Bootstap 4? It's the 4th generation of this popular responsive framework. Bootstrap 4 will include some interesting new features such as 5 grid sizes (now including xl), cards, `em` sizing, CSS normalization (reboot) and larger font
-                sizes.
-            </p>
-
-<hr>
-
-<div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="//placehold.it/740x180/bbb/fff?text=..." alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Button</a>
-                        </div>
-                    </div>
-
-                    <div class="card card-inverse" style="background-color: #333; border-color: #333;">
-                        <div class="card-block">
-                            <h3 class="card-title">Dark background</h3>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-secondary-outline">Outline</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead class="thead-inverse">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Label</th>
-                                    <th>Header</th>
-                                    <th>Column</th>
-                                    <th>Data</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1,001</td>
-                                    <td>responsive</td>
-                                    <td>bootstrap</td>
-                                    <td>cards</td>
-                                    <td>grid</td>
-                                </tr>
-                                <tr>
-                                    <td>1,002</td>
-                                    <td>rwd</td>
-                                    <td>web designers</td>
-                                    <td>theme</td>
-                                    <td>responsive</td>
-                                </tr>
-                                <tr>
-                                    <td>1,003</td>
-                                    <td>free</td>
-                                    <td>open-source</td>
-                                    <td>download</td>
-                                    <td>template</td>
-                                </tr>
-                                <tr>
-                                    <td>1,003</td>
-                                    <td>frontend</td>
-                                    <td>developer</td>
-                                    <td>coding</td>
-                                    <td>card panel</td>
-                                </tr>
-                                <tr>
-                                    <td>1,004</td>
-                                    <td>migration</td>
-                                    <td>bootstrap 4</td>
-                                    <td>mobile-first</td>
-                                    <td>design</td>
-                                </tr>
-                                <tr>
-                                    <td>1,005</td>
-                                    <td>navbar</td>
-                                    <td>sticky</td>
-                                    <td>jumbtron</td>
-                                    <td>header</td>
-                                </tr>
-                                <tr>
-                                    <td>1,006</td>
-                                    <td>collapse</td>
-                                    <td>affix</td>
-                                    <td>submenu</td>
-                                    <td>footer</td>
-                                </tr>
-                                <tr>
-                                    <td>1,007</td>
-                                    <td>layout</td>
-                                    <td>examples</td>
-                                    <td>themes</td>
-                                    <td>grid</td>
-                                </tr>
-                                <tr>
-                                    <td>1,008</td>
-                                    <td>migration</td>
-                                    <td>bootstrap 4</td>
-                                    <td>flexbox</td>
-                                    <td>design</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-			</main>
 
 
 	</div>
 
 
-</div>
+</main>
 
 
 <footer class="admin_footer__ng2 container-fluid bg-primary"></footer>
-
-
-
-
-
-<nav>
-  <a routerLink="/dashboard" routerLinkActive="active">Home</a>
-  <a routerLink="/about" routerLinkActive="active">About</a>
-  <a routerLink="/details" routerLinkActive="active">Details</a>
-</nav>
-
-<router-outlet></router-outlet>
