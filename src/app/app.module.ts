@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 
-import { HomeModule } from './home/home.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { CoreModule } from './core/core.module';
 
     CoreModule,
 
-    HomeModule
+    DashboardModule
   ],
   declarations: [AppComponent],
   providers: [],
