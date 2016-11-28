@@ -27,8 +27,8 @@ module.exports = {
   },
 
   resolve : {
-    extensions : ["", ".js", ".ts"],
-     modulesDirectories : ["web_modules", "node_modules", "spritesmith-generated"]
+    extensions : [".js", ".ts"],
+     modules : ["web_modules", "node_modules", "spritesmith-generated"]
   },
 
   module : {
@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         test : /\.html$/,
-        loader : "html"
+        loader : "html-loader"
       },
 {
   test: /\.(png|jpe?g|gif|ico)$/,
@@ -69,20 +69,23 @@ module.exports = {
       {
         test : /\.css$/,
         include : helpers.root(srcName, "app"),
-        loader : "raw"
+        loader : "raw-loader"
       },
       {
         test : /\.css$/,
         exclude : helpers.root(srcName, "app"),
-        loader : ExtractTextPlugin.extract("style", "css?sourceMap")
+        loader : ExtractTextPlugin.extract({
+          fallbackLoader : "style-loader",
+          loader : "css-loader?sourceMap"
+        })
       },
       {
         test : /\.(scss|sass)$/,
         include : helpers.root(srcName, "assets", "styles"),
-        loader : ExtractTextPlugin.extract(
-          "style",
-          "css!resolve-url!sass" 
-        )
+        loader : ExtractTextPlugin.extract({
+          fallbackLoader : "style-loader",
+          loader : "css-loader!resolve-url-loader!sass-loader"
+        })
       },
     ]
   },
