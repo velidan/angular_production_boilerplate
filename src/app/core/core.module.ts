@@ -8,12 +8,14 @@ import { CommonModule }      from '@angular/common';
 import { HeaderModule } from './modules/header/header.module';
 import { FooterModule } from './modules/footer/footer.module';
 
+import { NavigationModule } from './modules/navigation/navigation.module';
 
 
 @NgModule({
   exports: [
     HeaderModule,
-    FooterModule
+    FooterModule,
+    NavigationModule
   ]
 })
 export class CoreModule {
