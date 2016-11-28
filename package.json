@@ -4,7 +4,7 @@
   "description": "Wellnine Project",
   "scripts": {
     "start": "webpack-dev-server --inline --port 8080",
-    "deploy": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "deploy": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile",
     "postinstall": "typings install",
     "test": "karma start"
   },
@@ -63,6 +63,11 @@
     "webpack-glob": "^2.0.2",
     "webpack-merge": "^1.0.1",
     "webpack-spritesmith": "^0.3.0",
-    "webpack-svgstore-plugin": "^3.0.5"
+    "webpack-svgstore-plugin": "^3.0.5",
+
+    "babel-core": "6.18.2",
+    "babel-preset-latest": "6.16.0",
+    "babili": "0.0.9",
+    "babili-webpack-plugin": "0.0.7"
   }
 }

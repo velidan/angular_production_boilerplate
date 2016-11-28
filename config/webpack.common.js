@@ -20,6 +20,10 @@ var webpack = require("webpack"),
 
 module.exports = {
   entry : {
+        globals: [
+      'zone.js',
+      'reflect-metadata'
+    ],
     "polyfills" : "./" + srcName + "/polyfills.ts",
     "vendor" : "./" + srcName + "/vendor.ts",
     "app" : "./" + srcName + "/main.ts",

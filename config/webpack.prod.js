@@ -5,6 +5,7 @@ var helpers = require("./helpers"),
   ExtractTextPlugin = require("extract-text-webpack-plugin"),
   commonConfig = require("./webpack.common.js");
 
+var BabiliPlugin = require("babili-webpack-plugin");
 
 const ENV = process.env.NODE_ENV = process.env.ENV = "production";
 
@@ -18,21 +19,16 @@ module.exports = webpackMerge(commonConfig, {
     chunkFilename : "[id].[hash].chunk.js"
   },
 
-  htmlLoader : {
-    minimize : false // workaround for ng2
-  },
-
   plugins : [
-    new webpack.NoErrorsPlugin(),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({ // https ://github.com/angular/angular/issues/10618
-      compress : {
-        warnings : false
-      },
-      mangle : {
-        keep_fnames : true
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        htmlLoader : {
+          minimize : true // workaround for ng2
+        }
       }
     }),
+    new webpack.NoErrorsPlugin(),
+new BabiliPlugin(),
     new ExtractTextPlugin("[name].[hash].css"),
     new webpack.DefinePlugin({
       "process.env" : {
