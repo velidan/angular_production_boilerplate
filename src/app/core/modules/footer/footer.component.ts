@@ -1,10 +1,4 @@
-//interface for footer data
-interface FooterDataInterface {
-    copyrightLabel : string,
-    copyRightTxt : string,
-    copyYearStart : number,
-    copyCurrentYear : number
-}
+
 /* ------- ! Interfaces ---------*/
 
 
@@ -44,7 +38,7 @@ export class FooterComponent {
    title = 'Footer';
 
   // footer text data
-  public footerData: FooterDataInterface = {
+  public footerData: any = {
     'copyrightLabel': 'Copyright',
     'copyRightTxt': 'CompuGroup Medical',
     'copyYearStart': 2015,

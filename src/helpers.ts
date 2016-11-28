@@ -1,6 +1,6 @@
 import './assets/styles/main.scss';
 
-let helpersInstance: Helpers;
+let helpersInstance: any;
 
 class Helpers {
 
@@ -31,7 +31,7 @@ class Helpers {
 
 
 
-		require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+		//require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
 	}
 
 

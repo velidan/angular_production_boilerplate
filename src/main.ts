@@ -8,8 +8,8 @@ import { AppModule } from './app/app.module';
 
 //Helpers.initSvgEngine();
 
-if (process.env.ENV === 'production') {
+//if (process.env.ENV === 'production') {
   enableProdMode();
-}
+// }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
