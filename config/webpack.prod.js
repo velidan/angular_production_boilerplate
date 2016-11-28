@@ -10,7 +10,7 @@ var BabiliPlugin = require("babili-webpack-plugin");
 const ENV = process.env.NODE_ENV = process.env.ENV = "production";
 
 module.exports = webpackMerge(commonConfig, {
-  devtool : "source-map",
+  devtool : false,
 
   output : {
     path : helpers.root("dist"),

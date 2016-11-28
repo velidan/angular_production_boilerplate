@@ -28,10 +28,18 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@types/jquery": "^2.0.34",
+    "@angular/platform-server": "2.2.1",
+    "@ngtools/webpack": "1.1.7",
+    "@types/node": "6.0.48",
+    "angular2-template-loader": "0.6.0",
+    "@angular/compiler-cli": "^2.2.3",
     "angular2-router-loader": "^0.3.3",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.3",
+    "babel-core": "6.18.2",
+    "babel-preset-latest": "6.16.0",
+    "babili": "0.0.9",
+    "babili-webpack-plugin": "0.0.7",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.0",
     "css-sourcemaps-webpack-plugin": "^1.0.3",
@@ -54,20 +62,16 @@
     "rimraf": "^2.5.2",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
+     "to-string-loader": "1.1.5",
     "ts-loader": "^1.2.2",
     "typescript": "^2.0.2",
     "typings": "^2.0.0",
     "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.27",
-    "webpack-dev-server": "2.1.0-beta.0",
+    "webpack-dev-server": "2.1.0-beta.11",
     "webpack-glob": "^2.0.2",
     "webpack-merge": "^1.0.1",
     "webpack-spritesmith": "^0.3.0",
-    "webpack-svgstore-plugin": "^3.0.5",
-
-    "babel-core": "6.18.2",
-    "babel-preset-latest": "6.16.0",
-    "babili": "0.0.9",
-    "babili-webpack-plugin": "0.0.7"
+    "webpack-svgstore-plugin": "^3.0.5"
   }
 }

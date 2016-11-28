@@ -14,16 +14,12 @@ var webpack = require("webpack"),
 // var ProvidePlugin = require("webpack/lib/ProvidePlugin");
 
 
-
+const AotPlugin = require('@ngtools/webpack').AotPlugin;
 
 
 
 module.exports = {
   entry : {
-        globals: [
-      'zone.js',
-      'reflect-metadata'
-    ],
     "polyfills" : "./" + srcName + "/polyfills.ts",
     "vendor" : "./" + srcName + "/vendor.ts",
     "app" : "./" + srcName + "/main.ts",
@@ -31,7 +27,7 @@ module.exports = {
   },
 
   resolve : {
-    extensions : [".js", ".ts"],
+    extensions : [".js", ".ts", ".html"],
      modules : ["web_modules", "node_modules", "spritesmith-generated"]
   },
 
@@ -39,12 +35,11 @@ module.exports = {
     loaders : [
       {
         test : /\.ts$/,
-        exclude : [/node_modules/],
-        loaders : ["awesome-typescript-loader", "angular2-template-loader", "angular2-router-loader"]
+        loaders : ['@ngtools/webpack']
       },
       {
         test : /\.html$/,
-        loader : "html-loader"
+        loader : "raw-loader"
       },
 {
   test: /\.(png|jpe?g|gif|ico)$/,
@@ -95,6 +90,10 @@ module.exports = {
   },
 
   plugins : [
+              new AotPlugin({
+                tsConfigPath: './tsconfig.json',
+                entryModule: 'src/app/app.module#AppModule'
+            }),
     new webpack.optimize.CommonsChunkPlugin({
       name : ["app", "vendor", "polyfills"]
     }),
